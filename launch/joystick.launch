@@ -1,0 +1,8 @@
+<launch>
+	<arg name="camera" default="true"/>
+	<node name="joy_node" pkg="joy" type="joy_node"/>
+	<node name="joy_transfer" pkg="joytransfer" type="joytransfer_node" required="true"/>
+	<include file="$(find racer_launch/launch/car.launch"/>
+		<arg name="cam" value="$(arg camera)" />
+	</include>
+</launch>

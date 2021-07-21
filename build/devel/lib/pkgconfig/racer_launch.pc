@@ -1,0 +1,8 @@
+prefix=/home/kyle/soft_sys/jet_racer_ws/src/racer_launch/build/devel
+
+Name: racer_launch
+Description: Description of racer_launch
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
