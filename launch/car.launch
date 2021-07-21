@@ -2,9 +2,7 @@
 	<arg name = "cam" default="true"/>
 	<include file="$(find servo_array_driver)/launch/servo_driver.launch"/>
 	<group if ="$(arg cam)">
-		<include file="$racer_launch/launch/cam_launch.launch"/>
-		<group ns="csi_camera_0">
-			<node name="image_proc" pkg="image_proc" type="image_proc"/>
-		</group>
+		 <node name="image_proc" pkg="image_proc" type="image_proc" ns="csi_cam_0"/>
+		<include file = "$(find racer_launch)/launch/jetson_csi_cam.launch"/>
 	</group>
 </launch>
